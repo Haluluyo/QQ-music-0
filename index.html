@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="scripts/jquery-3.3.1/jquery-3.3.1.js"></script>
+  <title>QQ音乐</title>
+</head>
+
+<body>
+  <header id="header">
+    <div id="topbar">
+      <h1>QQ音乐</h1>
+      <img id="logo" src="images/logo@2x.png" alt="logo">
+      <ul id="navigation">
+        <li id="home" class="navActive">
+          <a href="#">音乐馆</a>
+        </li>
+        <li id="login" class="">
+          <a href="#">我的音乐</a>
+        </li>
+        <li class="">
+          <a href="https://y.qq.com/download/index.html" target="_blank"> 客户端</a>
+        </li>
+        <li class="">
+          <a href="https://y.qq.com/vip/daren_recruit/apply.html" target="_blank">音乐号</a>
+        </li>
+        <li class="">
+          <a href="https://y.qq.com/portal/vipportal/index.html" target="_blank">VIP</a>
+        </li>
+      </ul>
+      <div id="search">
+        <input type="text" placeholder="搜索音乐、MV、歌单、用户">
+        <div id="search-icon">
+          <span class="iconfont icon"></span>
+        </div>
+      </div>
+      <div id="login">
+        <a href="#">登录</a>
+      </div>
+      <ul id="pay">
+        <li>
+          <a href="#">开通绿钻豪华版</a>
+        </li>
+        <li>
+          <a href="#">开通付费包</a>
+        </li>
+      </ul>
+    </div>
+    <div class="subnav">
+      <ul id="sub-navigation">
+        <li class="nav-item" data-role="tab" data-view=".home-view">
+          <a class="subActive" href="#">首页</a>
+        </li>
+        <li class="nav-item" data-role="tab" data-view=".singer-view">
+          <a href="#">歌手</a>
+        </li>
+        <li class="nav-item" data-role="tab" data-view=".album-view">
+          <a href="#">专辑</a>
+        </li>
+        <li class="nav-item" data-role="tab" data-view=".rank-view">
+          <a href="#">排行榜</a>
+        </li>
+        <li class="nav-item" data-role="tab" data-view=".songsList-view">
+          <a href="#">分类歌单</a>
+        </li>
+        <li class="nav-item" data-role="tab" data-view=".radio-view">
+          <a href="#">电台</a>
+        </li>
+        <li class="nav-item" data-role="tab" data-view=".mv-view">
+          <a href="#">MV</a>
+        </li>
+        <li class="nav-item" data-role="tab" data-view=".digitalAlbum-view">
+          <a href="#">数字专辑</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <!-- 登录我的音乐页面 -->
+  <div class="unlogin hide">
+    <div id="title"></div>
+    <div id="summery"></div>
+    <div id="loginBtn">
+      <a href="#" target="_blank">立即登录</a>
+    </div>
+  </div>
+  <div class="tab-contents">
+    <!-- 轮播组件_精彩推荐 二图 -->
+    <div class="navtab-ct home-view">
+      <div id="slider" class="panel-first">
+        <h2>精彩推荐</h2>
+        <div id="slider-wrap">
+          <ul class="slider-list">
+            <li class="slider-items">
+              <a href="#" target="_blank">
+                <img src="images/panel1_carousel_pic0.png" alt="">
+              </a>
+            </li>
+            <li class="slider-items">
+              <a href="#" target="_blank">
+                <img src="images/panel1_carousel_pic1.png" alt="">
+              </a>
+            </li>
+            <li class="slider-items">
+              <a href="#" target="_blank">
+                <img src="images/panel1_carousel_pic2.png" alt="">
+              </a>
+            </li>
+            <li class="slider-items">
+              <a href="#" target="_blank">
+                <img src="images/panel1_carousel_pic3.png" alt="">
+              </a>
+            </li>
+            <li class="slider-items">
+              <a href="#" target="_blank">
+                <img src="images/panel1_carousel_pic4.png" alt="">
+              </a>
+            </li>
+            <li class="slider-items">
+              <a href="#" target="_blank">
+                <img src="images/panel1_carousel_pic5.png" alt="">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!--翻页按钮 -->
+        <a class="pre button" href="#">&lt;</a>
+        <a class="next button" href="#">&gt;</a>
+        <ul id="bullet">
+          <li class="active"></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+    <div class="navtab-ct singer-view hide">
+      歌手
+    </div>
+    <div class="navtab-ct album-view hide">
+      专辑
+    </div>
+    <div class="navtab-ct rank-view hide">
+        排行榜
+    </div>
+    <!-- 懒加载组件_分类歌单-->
+    <div class="navtab-ct songsList-view hide">
+        <div id="menu">
+          <div class="type">
+            <h4>语种</h4>
+            <ul class="type-list">
+              <li><a href="#">国语</a></li>
+              <li><a href="#">英语</a></li>
+              <li><a href="#">韩语</a></li>
+              <li><a href="#">粤语</a></li>
+              <li><a href="#">日语</a></li>
+              <li><a href="#">更多<span></span></a></li>
+            </ul>
+          </div>
+          <div class="type">
+            <h4>流派</h4>
+            <ul class="type-list">
+              <li><a href="#">流行</a></li>
+              <li><a href="#">轻音乐</a></li>
+              <li><a href="#">摇滚</a></li>
+              <li><a href="#">民谣</a></li>
+              <li><a href="#">R&amp;B</a></li>
+              <li><a href="#">嘻哈</a></li>
+              <li><a href="#">电子</a></li>
+              <li><a href="#">古典</a></li>
+              <li><a href="#">更多<span></span></a></li>
+            </ul>
+          </div>
+          <div class="type">
+            <h4>主题</h4>
+            <ul class="type-list">
+              <li><a href="#">ACG</a></li>
+              <li><a href="#">经典</a></li>
+              <li><a href="#">网络歌曲</a></li>
+              <li><a href="#">影视</a></li>
+              <li><a href="#">KTV热歌</a></li>
+              <li><a href="#">儿歌</a></li>
+              <li><a href="#">中国风</a></li>
+              <li><a href="#">古风</a></li>
+              <li><a href="#">更多<span></span></a></li>
+            </ul>
+          </div>
+          <div class="type">
+            <h4>心情</h4>
+            <ul class="type-list">
+              <li><a href="#">伤感</a></li>
+              <li><a href="#">安静</a></li>
+              <li><a href="#">快乐</a></li>
+              <li><a href="#">治愈</a></li>
+              <li><a href="#">励志</a></li>
+              <li><a href="#">甜蜜</a></li>
+              <li><a href="#">寂寞</a></li>
+              <li><a href="#">宣泄</a></li>
+              <li><a href="#">思念</a></li>
+            </ul>
+          </div>
+          <div class="type">
+            <h4>场景</h4>
+            <ul class="type-list">
+              <li><a href="#">睡前</a></li>
+              <li><a href="#">夜店</a></li>
+              <li><a href="#">学习</a></li>
+              <li><a href="#">运动</a></li>
+              <li><a href="#">开车</a></li>
+              <li><a href="#">约会</a></li>
+              <li><a href="#">工作</a></li>
+              <li><a href="#">旅行</a></li>
+              <li><a href="#">更多<span></span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="songlist">
+          <h2>全部歌单</h2>
+          <div class="lazyload-wrap">
+            <ul class="lazyload-list">
+              <!-- 
+                <li>
+                <a class="cover" href="https://y.qq.com/n/yqq/playsquare/3834933826.html#stat=y_new.playlist.dissname" target="_blank">
+                  <img src="../images/lazyload/image0.jpg" alt="">
+                  <div class="cover-img"></div>
+                </a>
+                <div class="singer-info">
+                  <a href="https://y.qq.com/n/yqq/playsquare/3834933826.html#stat=y_new.playlist.dissname" target="_blank">Big Room：自驾游听的提神电音</a>
+                  <a class="singer-name" href="#">杰少</a>
+                  <p>播放量： 102万</p>
+                </div>
+              </li>
+              -->
+            </ul>
+            <div id="isload"></div>
+          </div>
+        </div>
+    </div>
+    <div class="navtab-ct radio-view hide">
+        电台
+    </div>
+    <div class="navtab-ct mv-view hide">
+        MV
+    </div>
+    <div class="navtab-ct digitalAlbum-view hide">
+        数字专辑
+    </div>
+  </div>
+ 
+
+  <script src="scripts/subnav_Tab.js"></script>
+  <script src="scripts/slider_jquery.js"></script>
+  <script src="scripts/topbar_Tab.js"></script>
+  <script src="scripts/lazyload_jquery.js"></script>
+  <!-- 老师的方法
+  <div class="qq-slider" id="slider">  
+    <div class="qq-slider-wrap">
+      <div class="qq-slider-item">
+        <a href="#" target="_blank"><img src="images/panel1_carousel_pic0.png" alt=""></a>
+      </div>
+      <div class="qq-slider-item">
+        <a href="#" target="_blank"><img src="images/panel1_carousel_pic1.png" alt=""></a>
+      </div>
+      <div class="qq-slider-item">
+        <a href="#" target="_blank"><img src="images/panel1_carousel_pic2.png" alt=""></a>
+      </div>
+      <div class="qq-slider-item">
+        <a href="#" target="_blank"><img src="images/panel1_carousel_pic3.png" alt=""></a>
+      </div>
+      <div class="qq-slider-item">
+        <a href="#" target="_blank"><img src="images/panel1_carousel_pic4.png" alt=""></a>
+      </div> 
+    </div>   
+  </div>
+  <script src="scripts/sliderByTom.js"></script>
+  <script src="scripts/app.js"></script>
+-->
+</body>
+
+</html>
