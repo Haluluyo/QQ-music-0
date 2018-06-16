@@ -1,0 +1,42 @@
+.unlogin{
+    height: $unlogin-height;
+    margin-top: $unlogin-margin;
+    background: url(../images/unlogin_bg_image.jpg) 50% no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    #title{
+        width: $unlogin-tit-width;
+        height: $unlogin-tit-height;
+        margin: 0 auto;
+        margin-top: $unlogin-tit-martop;
+        background: url(../images/unlogin_title.png);
+        background-position: 0 0;
+    }
+    #summery{
+        width: $unlogin-sum-width;
+        height: $unlogin-sum-height;
+        margin: $unlogin-sum-mar;
+        background: url(../images/unlogin_title.png);
+        background-position: $unlogin-sum-position;
+    }
+    #loginBtn{
+        margin: 0 auto;
+        width: $unlogin-loginBtn-width;
+        height: $unlogin-loginBtn-height;
+        line-height: $unlogin-loginBtn-height;
+        border-radius: $unlogin-loginBtn-radius;
+        text-align: center;
+        background: $unlogin-loginBtn-bg;
+        font-size: $unlogin-loginBtn-size;
+        a{
+            color: $unlogin-loginBtn-color;
+        }
+        &:hover{
+            background: $unlogin-loginBtn-bghover;
+        }
+    }
+    
+}
+.hide{
+    display: none;
+}
