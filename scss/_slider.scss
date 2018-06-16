@@ -1,0 +1,98 @@
+.panel-first{
+    width: 100%;
+    padding: $slider-panel-padding;
+    background: url(../images/panel_background_img.jpg) 50% 0 repeat-x;
+    font-size: $slider-panel-size;
+    text-align: center;
+    position: relative;
+    h2{
+        margin: $slider-panel-h2-margin;
+        letter-spacing: $slider-panel-h2-space;
+        cursor: default;
+        font-weight: normal;
+    }
+    #slider-wrap{
+        position: relative;
+        overflow: hidden;
+        width: $slider-wrap-width;
+        /*图片height=240px+ margin-top + margin-bottom*/
+        height: $slider-wrap-height;
+        margin: 0 auto;
+        .slider-list{
+            position: absolute;
+            /*width: 3480px; js实现*/
+            /*left: -1160px;*/
+            img{
+                width: $slider-img-width;
+                height: $slider-img-height;
+                margin: $slider-img-margin;
+                float: left;
+            }
+        }
+    }
+    .button{
+        position: absolute;
+        width: $slider-btn-width;
+        height: $slider-btn-height;
+        line-height: $slider-btn-line;
+        top: 50%;
+        margin-top: $slider-btn-mar-top;
+        background: $slider-btn-bg-color;
+        font-size: $slider-btn-size;
+        color: $slider-btn-color;
+        opacity: 0;  
+    }
+    .pre{
+        left: 0px;
+    }
+    .next{
+        right: 0px;
+    } 
+    .button:hover{
+        background: $slider-btn-color;
+    }
+    #bullet{
+        width: 100%;
+        margin: 0 auto;
+        padding-top: $slider-bullet-pad-top;
+        li{
+            display: inline-block;
+            width: $slider-bullet-pad-top;
+            height: $slider-bullet-pad-top;
+            margin: $slider-bullet-mar;
+            border-radius: 50%;
+            background: $slider-bullet-bg-color;
+            cursor: pointer;
+        }
+        li:hover{
+            background: $slider-bullet-hover;
+        }
+        .active{
+            background: $slider-bullet-hover;
+        }
+    }
+}
+.panel-first:hover .button{
+    opacity: 0.6;
+}
+
+
+/* flex布局
+.qq-slider{
+    width: 100%;
+    overflow: hidden;
+    .qq-slider-wrap{
+        //width: 500%; js实现
+        display: flex;
+    }
+    .qq-slider-item{
+        flex-basis: 100%;
+        > a{
+            display: block;
+            img{
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+} */
