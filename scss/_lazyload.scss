@@ -1,0 +1,117 @@
+
+.songsList-view{
+    width: 100%;
+    background: url(../images/panel_background_img.jpg) 50% 0 repeat-x;
+    font-size: $lazy-font;
+    #menu{
+        //border: 1px solid red;
+        display: flex;
+        justify-content: space-between;
+        padding: $lazy-menu-pad;
+        .type{
+            //border: 1px solid orange;
+            padding: $lazy-menu-type-pad;
+            border-left: $lazy-menu-type-border;
+            h4{
+                margin-bottom: $lazy-menu-h-mar;
+                color: $lazy-color;
+                cursor: default; 
+            }
+            .type-list{
+                //border: 1px solid orange;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                min-width: $lazy-menu-list-minwid;
+                li{
+                    //border: 1px solid pink;
+                    width: $lazy-menu-li-width;
+                    margin: $lazy-menu-list-mar;
+                    span{
+                        display: inline-block;
+                        margin-left: $lazy-moreicon-mar-left;
+                        margin-bottom: $lazy-moreicon-mar-bottom;
+                        padding: $lazy-moreicon-pad;
+                        border-right: $lazy-moreicon-border;
+                        border-bottom: $lazy-moreicon-border;
+                        transform: rotate(45deg);
+                        color: $font-color;
+                    }
+                }
+                li:hover span{
+                    color: $lazy-hover-color;
+                }
+            }
+        }
+        .type:first-child{
+            border-left: 0;
+        }
+    }
+    .songlist{
+        //border: 1px solid blue;
+        width: 100%;
+        padding: $lazy-songlist-pad;
+        h2{
+            margin: $lazy-songlist-h-mar;
+            font-weight: normal;
+            letter-spacing: $lazy-songlist-space;
+        } 
+        .lazyload-list{
+            display: flex;
+            flex-wrap: wrap;
+            font-size: $lazy-font;
+            a{
+                display: block;
+            }
+            li{
+                //border: 1px solid purple;
+                display: inline-block;
+                margin: $lazy-songlist-li-margin;
+                .cover{
+                    //border: 1px solid #fff;
+                    width: $lazy-songlist-img-wid;
+                    height: $lazy-songlist-img-wid;
+                    position: relative;
+                    overflow: hidden;
+                    img{
+                        width: $lazy-songlist-img-wid;
+                        height: $lazy-songlist-img-wid;
+                    }
+                    .cover-img{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        width: $lazy-songlist-coverimg-wid;
+                        height: $lazy-songlist-coverimg-wid;
+                        background: url("../images/lazyload/cover_play.png");
+                        opacity: 0;
+                        //border: 1px solid #000;
+                    }
+                }
+                .cover:hover img{
+                    transform: scale(1.07) translateZ(0);
+                    transition: transform .75s cubic-bezier(0,1,.75,1);
+                }
+                .cover:hover .cover-img{
+                    opacity: 1;
+                }
+                .singer-info{
+                    margin-top: $lazy-songlist-info-margin;
+                    .singer-name,p{
+                        color: $lazy-color;
+                    }
+                    .singer-name:hover{
+                        color: $lazy-hover-color;
+                    }
+                }
+            }
+        }
+        #isload{
+            width: $lazy-songlist-coverimg-wid;
+            height: $lazy-songlist-coverimg-wid;
+            display: none;
+        }
+    }
+
+ } 
