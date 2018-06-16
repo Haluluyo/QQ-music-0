@@ -1,0 +1,114 @@
+#header{
+    padding: $header-padding;
+    #topbar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: $topbar-border;
+        background: $header-background;
+        h1{
+            display: none;
+        }
+        #logo{
+            height: $logo-height;
+            width: $logo-width;
+            cursor: pointer;
+        }
+        #navigation{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            line-height: $nav-line;
+            font-size: $nav-size;
+            li{
+                padding: $nav-padding;
+            }
+            .navActive{
+                background: $nav-background;
+                a{
+                    color: $nav-active-color; 
+                }
+            }
+        }
+        #search{
+            display: flex;
+            justify-content: space-between;
+            margin-left: $search-marleft;
+            font-size: 0;
+            input{
+                width: $search-ipt-width;
+                height:  $search-ipt-height;
+                margin-right: -1px;
+                padding-left: $search-ipt-padleft;
+                border: $search-ipt-border;
+                border-right: none;
+                border-radius: $search-ipt-radius;
+                outline: none;
+            }
+            #search-icon{
+                display: inline-block;
+                width: $icon-height;
+                height: $icon-height;
+                line-height: $icon-height;
+                text-align: center;
+                border: $icon-border;
+                border-left: none;
+            }
+            .icon:before{
+                content: "\e6e4";
+                text-align: center;
+            }
+            .icon:hover{
+                color: $hover-color;
+                cursor: pointer;
+            }
+        }
+        #login{
+            margin: $login-margin;
+            font-size: $login-size;
+        }
+        #pay{
+            font-size: $pay-size;
+            li{
+                float: left;
+                padding: $pay-padding;
+                margin-right: $pay-marright;
+                height: $icon-height;
+                line-height: $icon-height;
+                border-radius: $pay-border-radius;
+            }
+            li:first-child{
+                border: $pay-fir-border;
+                background: $pay-background;
+            }
+            li:first-child a{
+                color: $pay-fir-corlor;
+            }
+            li:first-child:hover{
+                background: $pay-fir-hover;
+                border-color: $pay-fir-hover;
+                color: $pay-fir-corlor;
+            }
+            li:last-child{
+                border: $pay-lst-border;
+            }
+            li:last-child:hover{
+                background-color: $pay-lst-hover;
+                color: $font-color;
+            }
+        }
+    }
+    #sub-navigation{
+        display: flex;
+        justify-content: space-between;
+        padding: $subnav-padding;
+        height: $subnav-height;
+        line-height: $subnav-height;
+        font-size: $subnav-size;
+        .subActive{
+            color: $hover-color;
+        }
+    }     
+}
+  
