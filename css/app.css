@@ -1,0 +1,337 @@
+@charset "UTF-8";
+/*重置样式*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  margin: 0 auto; }
+
+ul, li {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: #333; }
+
+a:hover {
+  color: #31c27c;
+  cursor: pointer; }
+
+#header {
+  padding: 0 30px; }
+  #header #topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #f2f2f2;
+    background: #fff; }
+    #header #topbar h1 {
+      display: none; }
+    #header #topbar #logo {
+      height: 46px;
+      width: 170px;
+      cursor: pointer; }
+    #header #topbar #navigation {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      line-height: 90px;
+      font-size: 18px; }
+      #header #topbar #navigation li {
+        padding: 0 16px; }
+      #header #topbar #navigation .navActive {
+        background: #31c27c; }
+        #header #topbar #navigation .navActive a {
+          color: #fff; }
+    #header #topbar #search {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 60px;
+      font-size: 0; }
+      #header #topbar #search input {
+        width: 182px;
+        height: 36px;
+        margin-right: -1px;
+        padding-left: 10px;
+        border: 1px solid #c9c9c9;
+        border-right: none;
+        border-radius: 3px;
+        outline: none; }
+      #header #topbar #search #search-icon {
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        text-align: center;
+        border: 1px solid #c9c9c9;
+        border-left: none; }
+      #header #topbar #search .icon:before {
+        content: "\e6e4";
+        text-align: center; }
+      #header #topbar #search .icon:hover {
+        color: #31c27c;
+        cursor: pointer; }
+    #header #topbar #login {
+      margin: 0 20px;
+      font-size: 16px; }
+    #header #topbar #pay {
+      font-size: 13px; }
+      #header #topbar #pay li {
+        float: left;
+        padding: 0 10px;
+        margin-right: 10px;
+        height: 36px;
+        line-height: 36px;
+        border-radius: 2px; }
+      #header #topbar #pay li:first-child {
+        border: 1px solid #31c27c;
+        background: #31c27c; }
+      #header #topbar #pay li:first-child a {
+        color: #fff; }
+      #header #topbar #pay li:first-child:hover {
+        background: #2caf6f;
+        border-color: #2caf6f;
+        color: #fff; }
+      #header #topbar #pay li:last-child {
+        border: 1px solid #c9c9c9; }
+      #header #topbar #pay li:last-child:hover {
+        background-color: #ededed;
+        color: #333; }
+  #header #sub-navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 220px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 15px; }
+    #header #sub-navigation .subActive {
+      color: #31c27c; }
+
+.panel-first {
+  width: 100%;
+  padding: 30px 0 20px 0;
+  background: url(../images/panel_background_img.jpg) 50% 0 repeat-x;
+  font-size: 20px;
+  text-align: center;
+  position: relative; }
+  .panel-first h2 {
+    margin: 5px 0;
+    letter-spacing: 16px;
+    cursor: default;
+    font-weight: normal; }
+  .panel-first #slider-wrap {
+    position: relative;
+    overflow: hidden;
+    width: 1160px;
+    /*图片height=240px+ margin-top + margin-bottom*/
+    height: 260px;
+    margin: 0 auto; }
+    .panel-first #slider-wrap .slider-list {
+      position: absolute;
+      /*width: 3480px; js实现*/
+      /*left: -1160px;*/ }
+      .panel-first #slider-wrap .slider-list img {
+        width: 560px;
+        height: 240px;
+        margin: 10px;
+        float: left; }
+  .panel-first .button {
+    position: absolute;
+    width: 90px;
+    height: 120px;
+    line-height: 100px;
+    top: 50%;
+    margin-top: -45px;
+    background: #f3f3f3;
+    font-size: 60px;
+    color: #fff;
+    opacity: 0; }
+  .panel-first .pre {
+    left: 0px; }
+  .panel-first .next {
+    right: 0px; }
+  .panel-first .button:hover {
+    background: #fff; }
+  .panel-first #bullet {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 10px; }
+    .panel-first #bullet li {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin: 0 10px;
+      border-radius: 50%;
+      background: #e3e3e3;
+      cursor: pointer; }
+    .panel-first #bullet li:hover {
+      background: #b1b1b1; }
+    .panel-first #bullet .active {
+      background: #b1b1b1; }
+
+.panel-first:hover .button {
+  opacity: 0.6; }
+
+/* flex布局
+.qq-slider{
+    width: 100%;
+    overflow: hidden;
+    .qq-slider-wrap{
+        //width: 500%; js实现
+        display: flex;
+    }
+    .qq-slider-item{
+        flex-basis: 100%;
+        > a{
+            display: block;
+            img{
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+} */
+.unlogin {
+  height: 622px;
+  margin-top: -1px;
+  background: url(../images/unlogin_bg_image.jpg) 50% no-repeat;
+  background-size: cover;
+  overflow: hidden; }
+  .unlogin #title {
+    width: 735px;
+    height: 64px;
+    margin: 0 auto;
+    margin-top: 210px;
+    background: url(../images/unlogin_title.png);
+    background-position: 0 0; }
+  .unlogin #summery {
+    width: 350px;
+    height: 32px;
+    margin: 30px auto;
+    background: url(../images/unlogin_title.png);
+    background-position: 0px 32px; }
+  .unlogin #loginBtn {
+    margin: 0 auto;
+    width: 128px;
+    height: 48px;
+    line-height: 48px;
+    border-radius: 2px;
+    text-align: center;
+    background: #31c27c;
+    font-size: 20px; }
+    .unlogin #loginBtn a {
+      color: #fff; }
+    .unlogin #loginBtn:hover {
+      background: #2caf6f; }
+
+.hide {
+  display: none; }
+
+.songsList-view {
+  width: 100%;
+  background: url(../images/panel_background_img.jpg) 50% 0 repeat-x;
+  font-size: 14px; }
+  .songsList-view #menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 30px 32px 30px; }
+    .songsList-view #menu .type {
+      padding: 0 25px;
+      border-left: 1px solid #eeeef0; }
+      .songsList-view #menu .type h4 {
+        margin-bottom: 10px;
+        color: #999;
+        cursor: default; }
+      .songsList-view #menu .type .type-list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        min-width: 120px; }
+        .songsList-view #menu .type .type-list li {
+          width: 60px;
+          margin: 5px 0; }
+          .songsList-view #menu .type .type-list li span {
+            display: inline-block;
+            margin-left: 4px;
+            margin-bottom: 2px;
+            padding: 3px;
+            border-right: 2px solid;
+            border-bottom: 2px solid;
+            transform: rotate(45deg);
+            color: #333; }
+        .songsList-view #menu .type .type-list li:hover span {
+          color: #31c27c; }
+    .songsList-view #menu .type:first-child {
+      border-left: 0; }
+  .songsList-view .songlist {
+    width: 100%;
+    padding: 0 30px 32px 30px; }
+    .songsList-view .songlist h2 {
+      margin: 10px 0;
+      font-weight: normal;
+      letter-spacing: 3px; }
+    .songsList-view .songlist .lazyload-list {
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 14px; }
+      .songsList-view .songlist .lazyload-list a {
+        display: block; }
+      .songsList-view .songlist .lazyload-list li {
+        display: inline-block;
+        margin: 10px 25px 30px 0; }
+        .songsList-view .songlist .lazyload-list li .cover {
+          width: 220px;
+          height: 220px;
+          position: relative;
+          overflow: hidden; }
+          .songsList-view .songlist .lazyload-list li .cover img {
+            width: 220px;
+            height: 220px; }
+          .songsList-view .songlist .lazyload-list li .cover .cover-img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70px;
+            height: 70px;
+            background: url("../images/lazyload/cover_play.png");
+            opacity: 0; }
+        .songsList-view .songlist .lazyload-list li .cover:hover img {
+          transform: scale(1.07) translateZ(0);
+          transition: transform 0.75s cubic-bezier(0, 1, 0.75, 1); }
+        .songsList-view .songlist .lazyload-list li .cover:hover .cover-img {
+          opacity: 1; }
+        .songsList-view .songlist .lazyload-list li .singer-info {
+          margin-top: 15px; }
+          .songsList-view .songlist .lazyload-list li .singer-info .singer-name, .songsList-view .songlist .lazyload-list li .singer-info p {
+            color: #999; }
+          .songsList-view .songlist .lazyload-list li .singer-info .singer-name:hover {
+            color: #31c27c; }
+    .songsList-view .songlist #isload {
+      width: 70px;
+      height: 70px;
+      display: none; }
+
+@font-face {
+  font-family: "iconfont";
+  src: url("iconfont.eot?t=1527433373524");
+  /* IE9*/
+  src: url("iconfont.eot?t=1527433373524#iefix") format("embedded-opentype"), url("data:application/x-font-woff;charset=utf-8;base64,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") format("woff"), url("iconfont.ttf?t=1527433373524") format("truetype"), url("iconfont.svg?t=1527433373524#iconfont") format("svg");
+  /* iOS 4.1- */ }
+
+body {
+  width: 1300px;
+  background: #fff;
+  font-family: poppin, Tahoma, Arial, 微软雅黑, sans-serif;
+  color: #333; }
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 24px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #a2a2a2; }
